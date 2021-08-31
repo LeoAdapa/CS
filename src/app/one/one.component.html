@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<head>
+    <title>Case Study Angular</title>
+<style>
+        .main {
+            font-size:36px;
+            font-weight:bold;
+            Text-align:center;
+        }
+        
+.scroll{
+overflow: auto;
+border: 1px silver solid;
+}
+.scroll select{
+border: none;
+}
+.total{
+border: 5px outset red;
+}
+
+
+#select1 {
+width: 30%;
+
+}
+#select2 {
+width: 20%;
+
+}
+#select3 {
+width: 60%;
+
+}
+
+
+
+#m { position:fixed; width:100%; height:10%; top:0;   left:0;     }
+
+#TopLeft { position:fixed; width:25%; height:50%; top:10%;   left:0;     }
+#TopLeft2 { position:fixed; width:5%; height:50%; top:10%; left:25%;     }
+#TopRight { position:fixed; width:70%; height:50%; top:10%;   left:30%;     }
+#BottomLeft { position:fixed; width:100%; height:25%; top:60%; left:0;     }
+#BottomRight{ position:fixed; width:100%; height:15%; top:85%; left:80%;    }
+#ag{ position:fixed;  height:15%; top:55%; left:0%    }
+
+
+
+#TopLeft {
+border-top: 1px black solid;
+//border-right: 1px black solid;
+border-bottom: 1px black solid;  
+}
+#b1{
+    color: white;
+    background-color: blue;
+}
+#b2{
+    color: white;
+    background-color: chocolate;
+}
+
+#TopLeft2 {
+border-top: 1px black solid;
+border-right: 1px black solid;
+border-bottom: 1px black solid;  
+}
+
+#TopRight {
+border-left: 1px black solid;
+border-bottom: 1px black solid; 
+}
+
+#BottomLeft {
+border-right: 1px black solid; 
+border-bottom: 1px black solid;
+}
+
+#BottomLeft {
+
+}
+.container {
+display: flex;
+justify-content: center;
+}
+.container-left {
+display: flex;
+justify-content: left;
+padding: 10px
+}
+.container-right {
+display: flex;
+justify-content: right;
+padding: 10px
+}
+</style>
+</head>
+<form>
+<body>
+<div class = "main" id="m">CASE STUDY - ANGULAR</div>
+
+<div id="TopLeft">
+
+<div class="container-right">
+
+<label for="cars">Transaction Type</label>
+<select name="TransactionType" id="cars">
+<option value="volvo">Select Transaction Type</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</select> 
+</div>
+
+<p>
+
+<div class="container-right">
+<label for="birthday">Effective Date</label>
+<input type="date" id="birthday" name="birthday"> 
+</div>
+
+<p>
+
+<div class="container-right">
+<label for="cars">Users</label>
+<select name="cars" id="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</select> 
+</div>
+
+</div>
+
+<div id="#TopLeft2">
+</div>
+<div id="TopRight" class="scroll">
+   <h3>Document Selection</h3>
+<hr>
+
+
+<table  >
+    <tr>
+        <th *ngFor="let head of Headers">
+            {{head}}
+
+        </th>
+    </tr>
+
+    <tr *ngFor="let row of rows">
+       
+        <td   *ngFor="let head of Headers">
+            {{row[head]}}
+
+        </td>
+        
+    </tr>
+</table>
+
+
+</div>
+<div id="BottomLeft" class="scroll">
+<select name="cars" id="select2">
+<option value="volvo">Case#</option>
+<option value="saab">html</option>
+<option value="mercedes">doc</option>
+<option value="audi">xml</option>
+</select>
+<select name="cars" id="select3">
+<option value="volvo">Case Name</option>
+<option value="saab">html</option>
+<option value="mercedes">doc</option>
+<option value="audi">xml</option>
+</select>
+</div>
+<div id="ag">
+  <h1>Agreements</h1>
+  </div>
+
+
+<div id="BottomRight" >
+    <button mat-raised button type="button" (click)="openDialog()" id="b1">
+        Add Agreement
+  </button>
+<button type="button" id="b2" >
+        Cancel Agreement
+  </button>
+</div>
+
+</body>
+</form>
+
+
+
+
+

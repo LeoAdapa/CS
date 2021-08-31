@@ -1,0 +1,41 @@
+.custom-dialog-container .mat-dialog-container {
+ 
+.hd1 {
+
+    border-bottom: 1px black solid;  
+   }
+   .hd2 {
+   
+   border-bottom: 1px black solid;  
+   }
+   #head1 { position:fixed; width:50%; height:5%; top:5%;   left:0;     }
+#head2 { position:fixed; width:50%; height:5%; top:5%;   left:55%;     }
+
+}
+.link-btn {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 0.8em;
+    padding: 0px;
+}
+.mat-button-focus-overlay {
+    background-color:transparent;
+}
+.mat-dialog-actions {
+   
+  
+    [align='center'] {
+      justify-content: center;
+    }
+  }
+  .mat-dialog-actions {
+   
+  
+    [align='end'] {
+      justify-content: flex-end;;
+    }
+  }

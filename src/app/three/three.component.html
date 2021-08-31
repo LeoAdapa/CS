@@ -1,0 +1,81 @@
+
+<h1 mat-dialog-title>Case</h1>
+
+
+
+
+    <mat-divider></mat-divider>
+   
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="Case Number" #input>
+   </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Case Name" #input>
+   </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+   <p>
+    
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Policy Number" #input>
+   </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last Name" #input>
+   </mat-form-field>
+   </p>
+   <p>
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="SSN" #input>
+   </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="First Name" #input>
+   </mat-form-field>
+   </p>
+   <mat-divider></mat-divider>
+   <h1 mat-dialog-title>Group</h1>
+   <mat-divider></mat-divider>
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Group Number" #input>
+   </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Group Name" #input>
+   </mat-form-field>
+   <p>
+    <mat-dialog-actions  align="center" class="link-btn">
+        <button mat-button>Case</button>
+        <button mat-button >Group</button>
+        <button mat-button >Policy</button>
+        
+    </mat-dialog-actions>
+   </p>
+   <mat-divider></mat-divider>
+   <p>
+   <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select  style="width:90%">
+      <mat-option *ngFor="let select of selects">
+    {{select}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Case#</mat-label>
+    <mat-select  style="width:90%">
+      <mat-option *ngFor="let Case of Cases">
+    {{Case}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Case Name</mat-label>
+    <mat-select  style="width:90%">
+      <mat-option *ngFor="let name of names">
+    {{name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </p>
+   
+<mat-dialog-actions  align="end">
+    <button mat-button mat-dialog-close="true">OK</button>
+    <button mat-button mat-dialog-close="false">Close</button>
+</mat-dialog-actions>
